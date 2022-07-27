@@ -78,6 +78,7 @@
   position: absolute;
   left: 100px;
   top: 448px;
+  transition: all 150ms linear ease-in-out;
 }
 
 #divisor {
@@ -90,16 +91,13 @@
   position: absolute;
   left: 100px;
   top: 473px;
+  transition: all 150ms linear ease-in-out;
 }
 a {
   text-decoration: none;
   color: #fff;
 }
-a:hover {
-  cursor: pointer;
-  font-family: 30px;
-  color: #885df1;
-}
+
 #currcity {
   font-size: 24px;
   line-height: 25px;
@@ -125,22 +123,26 @@ a:hover {
 #search-button {
   margin-top: 15px;
   margin-left: 215px;
-}
-
-#search-button:hover {
-  cursor: pointer;
-  font-family: 30px;
-  color: #885df1;
+  transition: all 150ms linear ease-in-out;
 }
 
 #search-location-button {
   margin-top: 15px;
   margin-left: 254px;
+  transition: all 150ms linear ease-in-out;
 }
 
-#search-location-button:hover {
+#search-location-button:hover,
+#search-button:hover,
+#open-source:hover,
+#linkedin:hover,
+#day-one:hover,
+#day-two:hover,
+#day-three:hover,
+#day-four:hover,
+#day-five:hover,
+a:hover {
   cursor: pointer;
-  font-family: 30px;
   color: #885df1;
 }
 
@@ -153,33 +155,23 @@ a:hover {
   border: 1px solid rgba(136, 93, 241, 0.3);
   border-radius: 10px;
   margin-top: 5px;
+  transition: all 150ms linear ease-in-out;
 }
-#day-one:hover {
-  cursor: pointer;
-  font-family: 30px;
-  color: #885df1;
-}
-#day-two:hover {
-  cursor: pointer;
-  font-family: 30px;
-  color: #885df1;
-}
-#day-three:hover {
-  cursor: pointer;
-  font-family: 30px;
-  color: #885df1;
-}
-#day-four:hover {
-  cursor: pointer;
-  font-family: 30px;
-  color: #885df1;
-}
-#day-five:hover {
-  cursor: pointer;
-  font-family: 30px;
-  color: #885df1;
-}
+
 ul {
   padding-left: 20px;
   margin: 15px;
+}
+#open-source,
+#linkedin {
+  color: rgba(136, 93, 241, 0.3);
+  font-size: 17px;
+  transition: all 150ms linear ease-in-out;
+}
+.links {
+  color: rgba(136, 93, 241, 0.3);
+  font-size: 17px;
+  position: absolute;
+  left: 469px;
+  top: 640px;
 }
