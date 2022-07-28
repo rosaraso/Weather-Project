@@ -92,8 +92,7 @@ form.addEventListener("submit", searchInput);
 //
 //function formatDate
 let currentTime = new Date();
-let h5 = document.querySelector("#currtime");
-h5.innerHTML = formatDate(currentTime);
+document.querySelector("#currtime").innerHTML = formatDate(currentTime);
 //
 
 searchCity("Buenos Aires");

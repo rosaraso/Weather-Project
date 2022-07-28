@@ -1,3 +1,12 @@
+ul {
+  padding: 0;
+  margin: 10px;
+}
+li {
+  padding: 5px, 10px;
+  margin: 0;
+  text-align: center;
+}
 .container {
   border: 1px solid rgba(136, 93, 241, 0.3);
   border-radius: 10px;
@@ -51,11 +60,13 @@
   padding: 10px;
   margin-bottom: 0;
 }
+#currcondition::first-letter {
+  text-transform: capitalize;
+}
 
 #currcondition,
 #curricon {
   font-size: 20px;
-  line-height: 22px;
 }
 
 #currcity {
@@ -70,7 +81,7 @@
 #currtemp {
   font-size: 50px;
   left: 50px;
-  line-height: 50px;
+
   position: relative;
   top: 450px;
 }
@@ -102,7 +113,6 @@ a {
 
 #currcity {
   font-size: 24px;
-  line-height: 25px;
 }
 #search-form-text,
 #search-button,
@@ -158,16 +168,6 @@ a:hover {
   border-radius: 10px;
   margin-top: 10px;
   transition: all 150ms linear ease-in-out;
-}
-
-ul {
-  padding: 0;
-  margin: 10px;
-}
-li {
-  padding: 5px, 10px;
-  margin: 0;
-  text-align: center;
 }
 
 #open-source,
