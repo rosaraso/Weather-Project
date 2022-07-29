@@ -7,6 +7,10 @@ li {
   margin: 0;
   text-align: center;
 }
+a {
+  text-decoration: none;
+  color: #fff;
+}
 .container {
   border: 1px solid rgba(136, 93, 241, 0.3);
   border-radius: 10px;
@@ -14,7 +18,7 @@ li {
   color: #fff;
   height: 600px;
   margin: 30px auto;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .leftside,
@@ -27,7 +31,7 @@ li {
   display: inline-block;
   height: 600px;
   position: relative;
-  width: 500px;
+  width: 400px;
   margin: 0;
 }
 
@@ -50,70 +54,59 @@ li {
   top: 80px;
 }
 
-#currcity,
-#curricon,
-#currtime,
-#currcondition {
+#weather-description {
+  list-style: none;
   position: relative;
-  top: 400px;
-  left: 60px;
-  padding: 10px;
-  margin-bottom: 0;
+
+  text-align: center;
+  top: 120px;
 }
 #currcondition::first-letter {
   text-transform: capitalize;
 }
 
-#currcondition,
-#curricon {
-  font-size: 20px;
-}
-
 #currcity {
+  position: relative;
   font-size: 40px;
   text-align: center;
+  top: 0px;
 }
 
 #currtime {
   font-size: 15px;
+  position: relative;
+  text-align: center;
+  top: -11px;
 }
 
 #currtemp {
-  font-size: 50px;
+  font-size: 60px;
   left: 50px;
-
   position: relative;
-  top: 450px;
+  top: 10px;
 }
 
 #celsius {
   font-size: 20px;
-  position: absolute;
-  left: 100px;
-  top: 448px;
+  position: relative;
+  left: 103px;
+  top: -60px;
   transition: all 150ms linear ease-in-out;
 }
 
 #divisor {
-  position: absolute;
-  left: 105px;
-  top: 456px;
+  position: relative;
+  left: 85px;
+  top: -55;
 }
 #fahrenheit {
   font-size: 20px;
-  position: absolute;
-  left: 100px;
-  top: 473px;
+  position: relative;
+  left: 63px;
+  top: -32px;
   transition: all 150ms linear ease-in-out;
 }
-a {
-  text-decoration: none;
-  color: #fff;
-}
 
-#currcity {
-  font-size: 24px;
-}
 #search-form-text,
 #search-button,
 #search-location-button {

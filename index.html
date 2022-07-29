@@ -21,40 +21,36 @@
       <div class="row no-gutters px-0">
         <div class="col no-gutters px-0">
           <div class="leftside">
-            <div class="row row-cols">
-              <div class="col-sm-3 px-0 no-gutters">
-                <h1 id="currtemp"></h1>
-                <span class="units">
-                  <span id="celsius" role="button">
-                    <a id="celsius-link" href="#">°C</a>
-                  </span>
+
+            <h1 id="currcity"></h1>
+            <p id="currtime"></p>
+
+
+            <div class="row row-cols-2">
+              <div class="col">
+                <h2 id="currtemp"></h2>
+                <span class="units"><span id="celsius" role="button"><a id="celsius-link" href="#">°C</a></span>
                   <span id="divisor">__</span>
-                  <span id="fahrenheit" role="button">
-                    <a id="fahrenheit-link" href="#">°F</a>
-                  </span>
+                  <span id="fahrenheit" role="button"><a id="fahrenheit-link" href="#">°F</a></span>
                 </span>
+
               </div>
-              <div class="col-sm-9 px-0 no-gutters">
-                <div class="row">
-                  <div class="col-8 col-sm-6 px-0 no-gutters">
-                    <h2 id="currcity"></h2>
-                  </div>
-                  <div class="col-8 col-sm-6 px-0 no-gutters">
-                    <span id="curricon">
-                      <img id="icon" src="" alt="">
-                    </span>
-                  </div>
-                  <div class="col-4 col-sm-6 px-0 no-gutters">
-                    <h5 id="currtime"></h5>
-                  </div>
-                  <div class="col-4 col-sm-6 px-0 no-gutters">
-                    <h6 id="currcondition"></h6>
-                  </div>
-                </div>
+              <div class="col"><span id="curricon"><img id="icon" src="" alt=""></span>
+                <h3 id="currcondition"></h3>
+
               </div>
+              <div class="col"></div>
+              <div class="col"></div>
             </div>
+            <ul id="weather-description">
 
+                <li id="temp-max"></li>
+                <li id="temp-min"></li>
 
+              <li id="today-feels-like"></li>
+              <li id="today-sunrise"></li>
+              <li id="today-sunset"></li>
+            </ul>
 
           </div>
         </div>

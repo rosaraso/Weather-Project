@@ -60,6 +60,25 @@ function showTemperature(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
+
+  document.querySelector(
+    "#today-feels-like"
+  ).innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}`;
+
+  document.querySelector("#temp-max").innerHTML = `Temp max: ${Math.round(
+    response.data.main.temp_max
+  )}`;
+
+  document.querySelector("#temp-min").innerHTML = `Temp min: ${Math.round(
+    response.data.main.temp_min
+  )}`;
+
+  document.querySelector("#today-sunrise").innerHTML = `Sunrise: ${
+    response.data.sys.sunrise * 10000
+  }`;
+  document.querySelector("#today-sunset").innerHTML = `Sunset: ${
+    response.data.sys.sunset * 10000
+  }`;
 }
 
 function searchInput(event) {
