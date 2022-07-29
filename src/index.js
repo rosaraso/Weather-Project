@@ -26,10 +26,11 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${dates} ${month}, ${hours}:${minutes}`;
+  return `Last updated: ${day} ${dates} ${month}, ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   document.querySelector("#currcity").innerHTML = response.data.name;
 
   document.querySelector("#currtemp").innerHTML = Math.round(
@@ -50,6 +51,15 @@ function showTemperature(response) {
   document.querySelector(
     "#weather-details-pressure"
   ).innerHTML = `Pressure ${response.data.main.pressure} hPa`;
+
+  document.querySelector("#icon").setAttribute(
+    "src",
+    `
+      http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchInput(event) {
