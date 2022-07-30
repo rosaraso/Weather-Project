@@ -57,10 +57,41 @@ a {
 #weather-description {
   list-style: none;
   position: relative;
-
   text-align: center;
-  top: 120px;
+  top: -68px;
 }
+
+.weather-temperature .active {
+  color: #885df1;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+#temp-max,
+#temp-min,
+#today-feels-like,
+#today-sunrise,
+#today-sunset {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+#currcondition {
+  position: relative;
+  top: -112px;
+  left: 247px;
+  font-size: 20px;
+}
+
+#icon {
+  position: relative;
+  top: -108px;
+  left: 240px;
+}
+
 #currcondition::first-letter {
   text-transform: capitalize;
 }
@@ -89,7 +120,7 @@ a {
 #celsius {
   font-size: 20px;
   position: relative;
-  left: 103px;
+  left: 117px;
   top: -60px;
   transition: all 150ms linear ease-in-out;
 }
@@ -102,7 +133,7 @@ a {
 #fahrenheit {
   font-size: 20px;
   position: relative;
-  left: 63px;
+  left: 75px;
   top: -32px;
   transition: all 150ms linear ease-in-out;
 }

@@ -26,27 +26,26 @@
             <p id="currtime"></p>
 
 
-            <div class="row row-cols-2">
-              <div class="col">
-                <h2 id="currtemp"></h2>
-                <span class="units"><span id="celsius" role="button"><a id="celsius-link" href="#">°C</a></span>
-                  <span id="divisor">__</span>
-                  <span id="fahrenheit" role="button"><a id="fahrenheit-link" href="#">°F</a></span>
-                </span>
+            <div class="row no-gutters">
+              <div class="col-6 no-gutters">
+                <div class="clearfix weather-temperature">
+                  <h2 id="currtemp"></h2>
+                  <span class="units"><span id="celsius" role="button"><a id="celsius-link" href="#"
+                        class="active">°C</a></span>
+                    <span id="divisor">__</span>
+                    <span id="fahrenheit" role="button"><a id="fahrenheit-link" href="#">°F</a></span>
+                  </span>
 
-              </div>
-              <div class="col"><span id="curricon"><img id="icon" src="" alt=""></span>
-                <h3 id="currcondition"></h3>
 
+                  <div class="col"><span id="curricon"><img src="" alt="" id="icon" class="float-left"></span>
+                    <h3 id="currcondition"></h3>
+                  </div>
+                </div>
               </div>
-              <div class="col"></div>
-              <div class="col"></div>
             </div>
             <ul id="weather-description">
-
-                <li id="temp-max"></li>
-                <li id="temp-min"></li>
-
+              <li id="temp-max"></li>
+              <li id="temp-min"></li>
               <li id="today-feels-like"></li>
               <li id="today-sunrise"></li>
               <li id="today-sunset"></li>
