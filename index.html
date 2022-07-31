@@ -25,20 +25,23 @@
             <h1 id="currcity"></h1>
             <p id="currtime"></p>
 
-
-            <div class="row no-gutters">
-              <div class="col-6 no-gutters">
+            <div class="row no-gutters px-0">
+              <div class="col-6 no-gutters px-0">
                 <div class="clearfix weather-temperature">
-                  <h2 id="currtemp"></h2>
-                  <span class="units"><span id="celsius" role="button"><a id="celsius-link" href="#"
-                        class="active">°C</a></span>
+                  <strong id="currtemp"></strong>
+                  <span class="units">
+                    <a id="celsius-link" href="#" class="active">°C</a>
                     <span id="divisor">__</span>
-                    <span id="fahrenheit" role="button"><a id="fahrenheit-link" href="#">°F</a></span>
+                    <a id="fahrenheit-link" href="#">°F</a>
                   </span>
 
-
-                  <div class="col"><span id="curricon"><img src="" alt="" id="icon" class="float-left"></span>
-                    <h3 id="currcondition"></h3>
+                  <div class="col">
+                    <ul id="icon-condition">
+                      <li id="curricon">
+                        <img src="" alt="" id="icon" class="float-left">
+                      </li>
+                      <li id="currcondition"></li>
+                    </ul>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 ul {
+  list-style: none;
   padding: 0;
   margin: 10px;
 }
@@ -6,10 +7,6 @@ li {
   padding: 5px, 10px;
   margin: 0;
   text-align: center;
-}
-a {
-  text-decoration: none;
-  color: #fff;
 }
 .container {
   border: 1px solid rgba(136, 93, 241, 0.3);
@@ -43,26 +40,51 @@ a {
   width: 298px;
 }
 #daily {
-  list-style: none;
   position: relative;
   top: 120px;
 }
 
 #weather-details {
-  list-style: none;
   position: relative;
   top: 80px;
 }
 
 #weather-description {
-  list-style: none;
   position: relative;
   text-align: center;
-  top: -68px;
+  top: 76px;
 }
 
+#celsius-link {
+  position: absolute;
+  left: 117px;
+  top: 125px;
+  transition: all 150ms linear ease-in-out;
+}
+#divisor {
+  position: absolute;
+  left: 120px;
+  top: 135px;
+}
+#fahrenheit-link {
+  position: absolute;
+  left: 118px;
+  top: 162px;
+  transition: all 150ms linear ease-in-out;
+}
+#units {
+  text-decoration: none;
+  color: #fff;
+}
+/*
+#fahrenheit-link,
+#celsius-link {
+  text-decoration: none;
+  color: #fff;
+}
+*/
 .weather-temperature .active {
-  color: #885df1;
+  color: #000;
   cursor: default;
 }
 
@@ -79,18 +101,19 @@ a {
   padding-bottom: 10px;
 }
 
+#icon-condition {
+  top: 87px;
+  position: absolute;
+  left: 250px;
+}
+
 #currcondition {
-  position: relative;
-  top: -112px;
-  left: 247px;
   font-size: 20px;
 }
 
-#icon {
+/*#icon {
   position: relative;
-  top: -108px;
-  left: 240px;
-}
+}*/
 
 #currcondition::first-letter {
   text-transform: capitalize;
@@ -115,27 +138,6 @@ a {
   left: 50px;
   position: relative;
   top: 10px;
-}
-
-#celsius {
-  font-size: 20px;
-  position: relative;
-  left: 117px;
-  top: -60px;
-  transition: all 150ms linear ease-in-out;
-}
-
-#divisor {
-  position: relative;
-  left: 85px;
-  top: -55;
-}
-#fahrenheit {
-  font-size: 20px;
-  position: relative;
-  left: 75px;
-  top: -32px;
-  transition: all 150ms linear ease-in-out;
 }
 
 #search-form-text,
@@ -170,14 +172,11 @@ a {
 
 #search-location-button:hover,
 #search-button:hover,
-#open-source:hover,
-#linkedin:hover,
 #day-one:hover,
 #day-two:hover,
 #day-three:hover,
 #day-four:hover,
-#day-five:hover,
-a:hover {
+#day-five:hover {
   cursor: pointer;
   color: #885df1;
 }
@@ -196,9 +195,15 @@ a:hover {
 
 #open-source,
 #linkedin {
-  color: rgba(136, 93, 241, 0.3);
+  color: #885df1;
   font-size: 17px;
+  text-decoration: none;
   transition: all 150ms linear ease-in-out;
+}
+#open-source:hover,
+#linkedin:hover {
+  cursor: pointer;
+  color: rgba(136, 93, 241, 0.3);
 }
 .links {
   color: rgba(136, 93, 241, 0.3);

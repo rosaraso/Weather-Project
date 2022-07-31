@@ -31,6 +31,7 @@ function formatDate(date) {
 
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
+  celsiusTemperatureFeelsLike = response.data.main.feels_like;
 
   document.querySelector("#currcity").innerHTML = response.data.name;
 
@@ -63,7 +64,7 @@ function showTemperature(response) {
 
   document.querySelector(
     "#today-feels-like"
-  ).innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}`;
+  ).innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeelsLike)}`;
 
   document.querySelector("#temp-max").innerHTML = `Temp max: ${Math.round(
     response.data.main.temp_max
@@ -74,7 +75,7 @@ function showTemperature(response) {
   )}`;
 
   document.querySelector("#today-sunrise").innerHTML = `Sunrise: ${
-    response.data.sys.sunrise * 10000
+    response.data.sys.sunrise * 1000
   }`;
   document.querySelector("#today-sunset").innerHTML = `Sunset: ${
     response.data.sys.sunset * 1000
@@ -141,8 +142,9 @@ form.addEventListener("submit", searchInput);
 //function formatDate
 let currentTime = new Date();
 document.querySelector("#currtime").innerHTML = formatDate(currentTime);
+
 //function showFarenheitTemperature
-let fahrenheitLink = document.querySelector("#fahrenkeit-link");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 //functionCelsiusTemperature
 let celsiusLink = document.querySelector("#celsius-link");
