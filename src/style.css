@@ -172,20 +172,14 @@ li {
 
 #search-location-button:hover,
 #search-button:hover,
-#day-one:hover,
-#day-two:hover,
-#day-three:hover,
-#day-four:hover,
-#day-five:hover {
+#day-one:hover {
   cursor: pointer;
   color: #885df1;
 }
 
-#day-one,
-#day-two,
-#day-three,
-#day-four,
-#day-five {
+#day-one {
+  position: relative;
+  top: 14px;
   padding-bottom: 10px;
   border: 1px solid rgba(136, 93, 241, 0.3);
   border-radius: 10px;
@@ -209,6 +203,6 @@ li {
   color: rgba(136, 93, 241, 0.3);
   font-size: 17px;
   position: absolute;
-  left: 469px;
+  left: 448px;
   top: 640px;
 }

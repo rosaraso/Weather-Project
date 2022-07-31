@@ -29,6 +29,36 @@ function formatDate(date) {
   return `Last updated: ${day} ${dates} ${month}, ${hours}:${minutes}`;
 }
 
+function displayForecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<ul id="daily">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                <li id="day-one">
+                  <span id="weather-forecast-day">${day}</span>
+                  <img id="icon-day-one" src="http://openweathermap.org/img/wn/10n@2x.png" alt="" width="30">
+                  <span id="weather-forecasttemp">
+                    <span id="weather-forecast-temp-min">15°</span>
+                    <span id="weather-forecast-temp-max">/27°</span>
+                  </span>
+                </li>
+    `;
+  });
+  forecastHTML = forecastHTML + `</ul>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "742a7afddcabe0ea280b64e9607b9a00";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   celsiusTemperatureFeelsLike = response.data.main.feels_like;
@@ -80,6 +110,8 @@ function showTemperature(response) {
   document.querySelector("#today-sunset").innerHTML = `Sunset: ${
     response.data.sys.sunset * 1000
   }`;
+
+  getForecast(response.data.coord);
 }
 
 function showFahrenheitTemperature(event) {
@@ -151,3 +183,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("Buenos Aires");
+displayForecast();
