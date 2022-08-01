@@ -1,7 +1,7 @@
 ul {
   list-style: none;
   padding: 0;
-  margin: 10px;
+  margin: 15px;
 }
 li {
   padding: 5px, 10px;
@@ -41,12 +41,20 @@ li {
 }
 #daily {
   position: relative;
-  top: 120px;
+  top: 100px;
 }
-
-#weather-details {
+hr {
   position: relative;
-  top: 80px;
+  top: 110px;
+}
+#weather-details-title {
+  position: relative;
+  top: 116px;
+  left: 138px;
+}
+#weather-details-grid {
+  position: relative;
+  top: 106px;
   text-align: center;
 }
 
@@ -189,6 +197,6 @@ li {
   color: rgba(136, 93, 241, 0.3);
   font-size: 17px;
   position: absolute;
-  left: 448px;
+  text-align: center;
   top: 640px;
 }

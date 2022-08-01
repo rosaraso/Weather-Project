@@ -60,7 +60,7 @@ function displayForecast(response) {
                   )}</span>
                   <img id="icon-day-one" src="http://openweathermap.org/img/wn/${
                     forecastDay.weather[0].icon
-                  }@2x.png" alt="" width="30">
+                  }@2x.png" alt="" width="40">
                   <span id="weather-forecasttemp">
                     <span id="weather-forecast-temp-min">${Math.round(
                       forecastDay.temp.min
@@ -103,9 +103,9 @@ function showTemperature(response) {
     "#weather-details-humidity"
   ).innerHTML = `Humidity ${response.data.main.humidity}%`;
 
-  document.querySelector("#weather-details-wind").innerHTML = `Wind Speed ${
-    Math.round(response.data.wind.speed) * 3.6
-  } km/h`;
+  document.querySelector(
+    "#weather-details-wind"
+  ).innerHTML = `Wind Speed ${Math.round(response.data.wind.speed * 3.6)} km/h`;
 
   document.querySelector(
     "#weather-details-pressure"
@@ -122,24 +122,42 @@ function showTemperature(response) {
 
   document.querySelector(
     "#today-feels-like"
-  ).innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeelsLike)}`;
+  ).innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeelsLike)}°`;
 
   document.querySelector("#temp-max").innerHTML = `Temp max: ${Math.round(
     response.data.main.temp_max
-  )}`;
+  )}°`;
 
   document.querySelector("#temp-min").innerHTML = `Temp min: ${Math.round(
     response.data.main.temp_min
-  )}`;
+  )}°`;
 
-  document.querySelector("#today-sunrise").innerHTML = `Sunrise🌅: ${
+  document.querySelector("#today-sunrise").innerHTML = `Sunrise: ${
     response.data.sys.sunrise * 1000
   }`;
-  document.querySelector("#today-sunset").innerHTML = `Sunset🌇: ${
+  document.querySelector("#today-sunset").innerHTML = `Sunset: ${
     response.data.sys.sunset * 1000
   }`;
 
   getForecast(response.data.coord);
+
+  /*  let sunrise = document.querySelector(".x-rise");
+  let sec = response.data.sys.sunrise;
+  let sunriseTime = new Date(sec * 1000);
+  let time = sunriseTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  sunrise.innerHTML = `${time}`;
+
+  let sunset = document.querySelector(".set");
+  let sec1 = response.data.sys.sunset;
+  let sunsetTime = new Date(sec1 * 1000);
+  let times = sunsetTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  sunset.innerHTML = `${times}`; */
 }
 
 function showFahrenheitTemperature(event) {
