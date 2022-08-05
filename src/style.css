@@ -49,8 +49,8 @@ hr {
 }
 #weather-details-title {
   position: relative;
-  top: 116px;
   left: 138px;
+  top: 116px;
 }
 #weather-details-grid {
   position: relative;
@@ -59,33 +59,14 @@ hr {
 }
 
 #celsius-link {
+  color: #fff;
   position: absolute;
   left: 117px;
+  transition: all 150ms linear ease-in-out;
+  text-decoration: none;
   top: 125px;
-  transition: all 150ms linear ease-in-out;
 }
-#divisor {
-  position: absolute;
-  left: 120px;
-  top: 135px;
-}
-#fahrenheit-link {
-  position: absolute;
-  left: 118px;
-  top: 162px;
-  transition: all 150ms linear ease-in-out;
-}
-#units {
-  text-decoration: none;
-  color: #fff;
-}
-/*
-#fahrenheit-link,
-#celsius-link {
-  text-decoration: none;
-  color: #fff;
-}
-*/
+
 .weather-temperature .active {
   color: #000;
   cursor: default;
@@ -96,18 +77,14 @@ hr {
 }
 
 #icon-condition {
-  top: 87px;
-  position: absolute;
   left: 250px;
+  position: absolute;
+  top: 87px;
 }
 
 #currcondition {
   font-size: 20px;
 }
-
-/*#icon {
-  position: relative;
-}*/
 
 #currcondition::first-letter {
   text-transform: capitalize;
@@ -148,45 +125,45 @@ hr {
 
 #search-form-text,
 .placeholder {
-  margin-top: 15px;
-  margin-left: 20px;
   color: #fff;
+  margin-left: 20px;
+  margin-top: 15px;
 }
 #search-button {
-  margin-top: 15px;
   margin-left: 215px;
+  margin-top: 15px;
   transition: all 150ms linear ease-in-out;
 }
 
 #search-location-button {
-  margin-top: 15px;
   margin-left: 254px;
+  margin-top: 15px;
   transition: all 150ms linear ease-in-out;
 }
 
 #search-location-button:hover,
 #search-button:hover,
 #day-one:hover {
-  cursor: pointer;
   color: #885df1;
+  cursor: pointer;
 }
 
 #day-one {
-  position: relative;
-  top: 14px;
-  padding-bottom: 10px;
   border: 1px solid rgba(136, 93, 241, 0.3);
   border-radius: 10px;
   margin-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
   transition: all 150ms linear ease-in-out;
+  top: 14px;
 }
 
 #open-source,
 #linkedin {
   color: #885df1;
   font-size: 17px;
-  text-decoration: none;
   transition: all 150ms linear ease-in-out;
+  text-decoration: none;
 }
 #open-source:hover,
 #linkedin:hover {
@@ -196,7 +173,6 @@ hr {
 .links {
   color: rgba(136, 93, 241, 0.3);
   font-size: 17px;
-  position: absolute;
   text-align: center;
   top: 640px;
 }

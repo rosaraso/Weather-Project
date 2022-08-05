@@ -64,10 +64,10 @@ function displayForecast(response) {
                   <span id="weather-forecasttemp">
                     <span id="weather-forecast-temp-min">${Math.round(
                       forecastDay.temp.min
-                    )}°</span>
-                    <span id="weather-forecast-temp-max">/${Math.round(
+                    )}°C</span>
+                    <span id="weather-forecast-temp-max"> / ${Math.round(
                       forecastDay.temp.max
-                    )}°</span>
+                    )}°C</span>
                   </span>
                 </li>
     `;
@@ -122,22 +122,22 @@ function showTemperature(response) {
 
   document.querySelector(
     "#today-feels-like"
-  ).innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeelsLike)}°`;
+  ).innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeelsLike)}°C`;
 
   document.querySelector("#temp-max").innerHTML = `Temp max: ${Math.round(
     response.data.main.temp_max
-  )}°`;
+  )}°C`;
 
   document.querySelector("#temp-min").innerHTML = `Temp min: ${Math.round(
     response.data.main.temp_min
-  )}°`;
+  )}°C`;
 
-  document.querySelector("#today-sunrise").innerHTML = `Sunrise: ${
+  document.querySelector("#today-sunrise").innerHTML = `Sunrise: ${new Date(
     response.data.sys.sunrise * 1000
-  }`;
-  document.querySelector("#today-sunset").innerHTML = `Sunset: ${
+  )}`;
+  document.querySelector("#today-sunset").innerHTML = `Sunset: ${new Date(
     response.data.sys.sunset * 1000
-  }`;
+  )}`;
 
   getForecast(response.data.coord);
 
@@ -158,24 +158,6 @@ function showTemperature(response) {
     minute: "2-digit",
   });
   sunset.innerHTML = `${times}`; */
-}
-
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  document.querySelector("#currtemp").innerHTML = Math.round(
-    fahrenheitTemperature
-  );
-}
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  document.querySelector("#currtemp").innerHTML =
-    Math.round(celsiusTemperature);
 }
 
 function searchInput(event) {
@@ -220,13 +202,6 @@ form.addEventListener("submit", searchInput);
 //function formatDate
 let currentTime = new Date();
 document.querySelector("#currtime").innerHTML = formatDate(currentTime);
-
-//function showFarenheitTemperature
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-//functionCelsiusTemperature
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("Buenos Aires");
 displayForecast();
