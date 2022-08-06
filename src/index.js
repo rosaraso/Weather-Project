@@ -101,15 +101,15 @@ function showTemperature(response) {
 
   document.querySelector(
     "#weather-details-humidity"
-  ).innerHTML = `Humidity ${response.data.main.humidity}%`;
+  ).innerHTML = `💧 Humidity ${response.data.main.humidity}%`;
 
   document.querySelector(
     "#weather-details-wind"
-  ).innerHTML = `Wind Speed ${Math.round(response.data.wind.speed * 3.6)} km/h`;
+  ).innerHTML = `💨 Wind ${Math.round(response.data.wind.speed * 3.6)} km/h`;
 
   document.querySelector(
     "#weather-details-pressure"
-  ).innerHTML = `Pressure ${response.data.main.pressure} hPa`;
+  ).innerHTML = `〰️ Pressure ${response.data.main.pressure} hPa`;
 
   document.querySelector("#icon").setAttribute(
     "src",
@@ -122,22 +122,38 @@ function showTemperature(response) {
 
   document.querySelector(
     "#today-feels-like"
-  ).innerHTML = `Feels like: ${Math.round(celsiusTemperatureFeelsLike)}°C`;
+  ).innerHTML = `🌈 Feels like: ${Math.round(celsiusTemperatureFeelsLike)}°C`;
 
-  document.querySelector("#temp-max").innerHTML = `Temp max: ${Math.round(
+  document.querySelector("#temp-max").innerHTML = `🌡️Temp max: ${Math.round(
     response.data.main.temp_max
   )}°C`;
 
-  document.querySelector("#temp-min").innerHTML = `Temp min: ${Math.round(
+  document.querySelector("#temp-min").innerHTML = `🥶 Temp min: ${Math.round(
     response.data.main.temp_min
   )}°C`;
 
-  document.querySelector("#today-sunrise").innerHTML = `Sunrise: ${new Date(
+  let sunrise = document.querySelector("#today-sunrise");
+  let sunriseTime = new Date(response.data.sys.sunrise * 1000);
+  let time = sunriseTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  sunrise.innerHTML = `⏰ Sunrise: ${time}`;
+
+  let sunset = document.querySelector("#today-sunset");
+  let sunsetTime = new Date(response.data.sys.sunset * 1000);
+  let times = sunsetTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  sunset.innerHTML = `🌇 Sunset: ${times}`;
+
+  /*document.querySelector("#today-sunrise").innerHTML = `Sunrise: ${new Date(
     response.data.sys.sunrise * 1000
   )}`;
   document.querySelector("#today-sunset").innerHTML = `Sunset: ${new Date(
     response.data.sys.sunset * 1000
-  )}`;
+  )}`;*/
 
   getForecast(response.data.coord);
 

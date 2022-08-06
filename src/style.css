@@ -4,7 +4,7 @@ ul {
   margin: 15px;
 }
 li {
-  padding: 5px, 10px;
+  padding: 10px, 5px;
   margin: 0;
   text-align: center;
 }
@@ -59,21 +59,10 @@ hr {
 }
 
 #celsius-link {
-  color: #fff;
-  position: absolute;
-  left: 117px;
-  transition: all 150ms linear ease-in-out;
-  text-decoration: none;
-  top: 125px;
-}
-
-.weather-temperature .active {
-  color: #000;
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  left: 49px;
+  top: -19px;
 }
 
 #icon-condition {
@@ -175,4 +164,14 @@ hr {
   font-size: 17px;
   text-align: center;
   top: 640px;
+}
+#temp-max,
+#temp-min,
+#today-feels-like,
+#weather-details-humidity,
+#weather-details-pressure,
+#today-sunrise,
+#today-sunset,
+#weather-details-wind {
+  padding-top: 10px;
 }
